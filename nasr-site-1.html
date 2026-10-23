@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a2540"><title>النصر لإنشاء المواقع الإلكترونية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a2540;--ink2:#14365c;--blue:#1f6feb;--blue2:#0b4fc4;--teal:#0db3a6;--teal2:#0a8f85;--green:#34c77b;--mist:#f2f8fa;--tint:#e8f6f6;--line:#d3e5eb;--muted:#4f6f80;--white:#fff;--grad:linear-gradient(135deg,#1f6feb,#0db3a6);--grad3:linear-gradient(90deg,#1f6feb,#0db3a6,#34c77b);--shadow:0 18px 45px #0a254018}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:'Cairo',Tahoma,sans-serif;line-height:1.8;overflow-x:hidden;background:radial-gradient(900px 500px at 100% -5%,#bfe9e6 0,#bfe9e600 70%),radial-gradient(800px 500px at 0 20%,#cfe0ff 0,#cfe0ff00 70%),var(--mist)}
+button,a{font:inherit}button{cursor:pointer}
+:focus-visible{outline:3px solid #0db3a6;outline-offset:2px}
+.topbar{position:sticky;top:0;z-index:20;background:#ffffffd9;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{max-width:1120px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:18px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;text-decoration:none;color:var(--ink)}
+.logo{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;background:var(--grad);color:#fff;font-size:22px;box-shadow:0 8px 20px #1f6feb30}
+.brand small{display:block;color:var(--teal2);font-size:11px;font-weight:600;line-height:1.3}
+.navlinks{display:flex;gap:6px;align-items:center}
+.navlinks button{background:transparent;border:1px solid transparent;color:var(--ink2);padding:8px 15px;border-radius:12px;font-weight:600;transition:.2s}
+.navlinks button:hover{background:var(--tint);color:var(--teal2)}
+.navlinks button.active{background:var(--ink);color:#fff}
+.mobile-menu{display:none;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.wrap{max-width:1120px;margin:auto;padding:0 20px}
+.hero{min-height:600px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:35px;padding-top:55px;padding-bottom:65px}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--teal2);background:#e3f6f3;border:1px solid #b5e6df;border-radius:99px;padding:6px 14px;font-size:13px;font-weight:700}
+.pulse{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px #34c77b30}
+h1{font-size:clamp(35px,5vw,60px);line-height:1.3;margin:18px 0;font-weight:900;color:var(--ink)}
+h1 span{background:var(--grad3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:17px;color:var(--muted);max-width:560px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{border:1px solid var(--line);border-radius:14px;padding:12px 22px;font-weight:800;transition:.25s;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn:hover{transform:translateY(-2px)}
+.primary{color:#fff;background:var(--grad);border-color:transparent;box-shadow:0 10px 26px #1f6feb35}
+.primary:hover{box-shadow:0 14px 30px #0db3a645}
+.secondary{color:var(--ink);background:#fff}
+.secondary:hover{border-color:var(--teal);color:var(--teal2)}
+.hero-art{position:relative;min-height:400px;display:grid;place-items:center}
+.orbit{position:absolute;width:340px;height:340px;border:2px dashed #0db3a640;border-radius:50%;animation:spin 40s linear infinite}
+.orbit:before,.orbit:after{content:'';position:absolute;width:16px;height:16px;border-radius:50%;background:var(--blue)}
+.orbit:before{top:40px;right:50px}.orbit:after{bottom:55px;left:25px;background:var(--green)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.mock-window{width:min(100%,420px);border:1px solid #ffffff30;background:linear-gradient(150deg,#14365c,#0a2540);color:#fff;border-radius:24px;padding:18px;box-shadow:0 30px 60px #0a254040;transform:rotate(-2deg);animation:bob 5s ease-in-out infinite alternate;position:relative}
+.mock-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:1px solid #ffffff1f}
+.dots{display:flex;gap:5px}.dots i{width:8px;height:8px;border-radius:50%;background:#34c77b}.dots i:nth-child(2){background:#0db3a6}.dots i:nth-child(3){background:#1f6feb}
+.mock-title{font-weight:900;color:#8ff0e1}
+.mock-body{padding:24px 6px 8px}
+.mock-banner{border-radius:17px;padding:23px;background:linear-gradient(120deg,#1f6feb,#0db3a6 70%,#34c77b);min-height:115px}
+.mock-banner strong{font-size:22px;display:block}.mock-banner span{font-size:12px;color:#effffb}
+.mock-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:13px}
+.mock-card{height:70px;border:1px solid #ffffff25;border-radius:13px;background:#ffffff10;display:grid;place-items:center;color:#8ff0e1;font-size:22px}
+.mock-lines{margin-top:16px;display:grid;gap:8px}.mock-lines i{height:7px;border-radius:9px;background:#ffffff26}.mock-lines i:nth-child(2){width:73%}.mock-lines i:nth-child(3){width:52%}
+@keyframes bob{to{transform:rotate(1deg) translateY(-10px)}}
+section{padding:64px 0}
+.section-head{text-align:center;margin:0 auto 32px;max-width:680px}
+.section-head h2{font-size:clamp(26px,4vw,38px);margin:0 0 8px;color:var(--ink)}
+.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{--c:var(--blue);--ct:#e4eeff;position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow);transition:.25s}
+.card:before{content:'';position:absolute;inset:0 0 auto 0;height:5px;background:var(--c)}
+.cards .card:nth-child(2){--c:var(--teal);--ct:#dcf5f2}.cards .card:nth-child(3){--c:var(--green);--ct:#e0f7ea}
+.card:hover{transform:translateY(-4px);border-color:var(--c)}
+.icon{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;background:var(--ct);font-size:24px;margin-bottom:12px}
+.card h3{margin:0 0 6px;color:var(--ink)}.card p{color:var(--muted);margin:0;font-size:14px}
+.model-preview{display:flex;flex-direction:column;gap:12px}
+.mini-site{height:140px;border-radius:14px;background:linear-gradient(130deg,#dff7f3,#7fdccf);color:#0a4d47;padding:15px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.mini-site.blue{background:linear-gradient(130deg,#e0ecff,#8db8ff);color:#12388a}
+.mini-site.gold{background:linear-gradient(130deg,#e3f8ea,#8be0ad);color:#0e4a2a}
+.mini-site b{font-size:19px}.mini-site span{font-size:11px}
+.mini-bar{height:7px;width:65%;border-radius:10px;background:currentColor;opacity:.25}
+.card .btn{width:100%;margin-top:14px;padding:9px}
+.section-alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.contact-box{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:32px;border-radius:26px;background:linear-gradient(115deg,#0a2540,#0b4fc4 55%,#0a8f85);color:#fff;box-shadow:0 24px 50px #0a254030}
+.contact-box h2{color:#fff}.contact-box p{color:#d5ece9;margin:0}
+.contact-box .primary{background:#fff;color:var(--ink);box-shadow:none}
+.footer{padding:30px 20px;text-align:center;color:#a9c4d0;font-size:13px;background:var(--ink)}
+.footer b{color:#8ff0e1}
+.view{display:none;min-height:60vh;padding:45px 0 75px}.view.active{display:block}
+.page-title{margin:0 0 8px;font-size:32px;color:var(--ink)}
+.subtext{color:var(--muted);margin-top:0}
+.bot-shell{max-width:800px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:var(--shadow)}
+.bot-head{padding:18px 22px;display:flex;align-items:center;gap:12px;background:linear-gradient(110deg,#0a2540,#0b4fc4);color:#fff}
+.bot-avatar{width:46px;height:46px;display:grid;place-items:center;background:linear-gradient(135deg,var(--teal),var(--green));color:#06324a;border-radius:15px;font-size:24px}
+.bot-head small{display:block;color:#9ff3e4}
+.progress{height:6px;background:#dcebf0}.progress div{height:100%;width:20%;background:var(--grad3);transition:.3s}
+.bot-content{padding:24px}
+.bot-message{background:#eef8fa;border:1px solid #cfe6ec;border-radius:18px 18px 5px 18px;padding:15px;margin-bottom:18px;color:var(--ink)}
+.bot-content h3{font-size:18px;margin:20px 0 12px;color:var(--ink)}
+.choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.choice{background:#fff;color:var(--ink);border:2px solid var(--line);border-radius:16px;padding:13px;text-align:right;min-height:60px;display:flex;align-items:center;gap:10px;font-weight:600;transition:.2s}
+.choice:hover{border-color:var(--teal);background:#f1fbf9}
+.choice.selected{border-color:var(--teal);background:#dff6f2;box-shadow:0 0 0 4px #0db3a620;color:#06504b}
+.choice .em{font-size:23px}
+.swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.swatch{height:88px;border:2px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:relative;background:#fff;transition:.2s}
+.swatch:hover{border-color:var(--teal)}
+.swatch .colors{display:flex;flex:1}.swatch .colors i{flex:1}
+.swatch .check{position:absolute;top:6px;left:7px;background:var(--teal);border-radius:50%;width:24px;height:24px;display:none;place-items:center;color:#fff}
+.swatch.selected{border-color:var(--teal);box-shadow:0 0 0 4px #0db3a625}.swatch.selected .check{display:grid}
+.swatch small{background:#fff;color:var(--ink2);text-align:center;padding:3px}
+.bot-actions{display:flex;justify-content:space-between;gap:10px;margin-top:24px}.bot-actions .btn{min-width:110px}
+.summary{border:1px solid #cfe6ec;background:#f2fafb;padding:18px;border-radius:16px}.summary p{margin:6px 0;color:var(--ink2)}
+.contact-options{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.owner-login{max-width:430px;margin:20px auto;background:#fff;border:1px solid var(--line);padding:26px;border-radius:22px;box-shadow:var(--shadow)}
+.field{display:grid;gap:6px;margin:13px 0}.field label{color:var(--muted);font-size:14px}
+.field input{background:#fff;color:var(--ink);border:2px solid var(--line);border-radius:12px;padding:13px;font:inherit;outline:none}
+.field input:focus{border-color:var(--teal);box-shadow:0 0 0 4px #0db3a620}
+.owner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}
+.stat{padding:20px;border-radius:18px;border:1px solid var(--line);background:#fff}
+.stat strong{font-size:28px;color:var(--blue);display:block}.stat span{color:var(--muted);font-size:13px}
+.notice{color:#7a5600;font-size:13px;background:#fff6df;border:1px solid #f2dba0;border-radius:12px;padding:12px;margin-top:15px}
+.toast{position:fixed;bottom:20px;left:20px;right:20px;max-width:460px;margin:auto;background:var(--ink);color:#fff;border:1px solid var(--teal);padding:13px 16px;border-radius:14px;box-shadow:0 18px 40px #0a254050;z-index:100;display:none}
+.toast.show{display:block;animation:fade .25s}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:780px){.nav{padding:10px 14px;flex-wrap:wrap}.mobile-menu{display:block}.navlinks{display:none;width:100%;grid-template-columns:repeat(2,1fr);padding:8px 0}.navlinks.open{display:grid}.navlinks button{background:#fff;border-color:var(--line)}.hero{grid-template-columns:1fr;padding-top:35px;gap:15px;min-height:auto}.hero-art{min-height:300px}.orbit{width:250px;height:250px}.mock-window{max-width:365px}.cards{grid-template-columns:1fr}.contact-box{align-items:flex-start;flex-direction:column}.owner-grid{grid-template-columns:repeat(2,1fr)}.swatches{grid-template-columns:repeat(2,1fr)}.choice-grid,.contact-options{grid-template-columns:1fr}.wrap{padding:0 15px}section{padding:48px 0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+.navlinks{background:#fff;border:1px solid var(--line);border-radius:99px;padding:5px;gap:2px;box-shadow:0 6px 18px #0a254012}
+.navlinks button{display:flex;align-items:center;gap:7px;border-radius:99px;padding:8px 16px}
+.navlinks button.active{background:var(--grad);color:#fff;box-shadow:0 6px 16px #1f6feb35;border-color:transparent}
+.mobile-menu{display:none!important}
+.cdots{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cdot{background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px 8px 10px;display:grid;justify-items:center;gap:8px;color:var(--ink);font-weight:600;transition:.2s;position:relative}
+.cdot span{width:54px;height:54px;border-radius:50%;box-shadow:inset 0 -6px 12px #0003,0 6px 14px #0002}
+.cdot:hover{border-color:var(--teal)}
+.cdot.selected{border-color:var(--teal);box-shadow:0 0 0 4px #0db3a625}
+.cdot.selected:after{content:'✓';position:absolute;top:6px;left:8px;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:13px}
+.bot-avatar{user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+.field textarea{background:#fff;color:var(--ink);border:2px solid var(--line);border-radius:12px;padding:13px;font:inherit;outline:none;resize:vertical}
+.field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 4px #0db3a620}
+@media(max-width:780px){.topbar{backdrop-filter:none;background:#fff}.nav{flex-wrap:nowrap}.navlinks{display:flex!important;position:fixed;bottom:12px;left:12px;right:12px;width:auto;z-index:50;border-radius:22px;padding:6px;justify-content:space-around;box-shadow:0 14px 34px #0a254030}.navlinks button{flex-direction:column;gap:2px;padding:7px 8px;font-size:12px;border-radius:16px;flex:1;justify-content:center;background:transparent;border-color:transparent}body{padding-bottom:92px}.toast{bottom:104px}.cdots{grid-template-columns:repeat(2,1fr)}}
+.steps-band{padding:0 0 64px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.steps li{--c:var(--blue);display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px 18px;box-shadow:var(--shadow)}
+.steps li:nth-child(2){--c:var(--teal)}.steps li:nth-child(3){--c:var(--green)}
+.steps span{flex:none;width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-family:'Reem Kufi',sans-serif;font-size:24px;color:#fff;background:var(--c)}
+.steps b{display:block}.steps small{display:block;color:var(--muted);font-size:13px;line-height:1.5}
+.section-head h2,.page-title{font-family:'Reem Kufi','Cairo',sans-serif;font-weight:700}
+#home{padding-top:0}
+.aurora{position:relative;overflow:hidden;color:#fff;text-align:center;padding:96px 0 140px;border-radius:0 0 52px 52px;background:radial-gradient(520px 320px at 12% 15%,#0db3a666,transparent 70%),radial-gradient(560px 340px at 88% 5%,#1f6feb77,transparent 70%),radial-gradient(460px 280px at 55% 105%,#34c77b55,transparent 70%),linear-gradient(180deg,#071b33,#0a2f5c)}
+.aurora:before{content:'';position:absolute;inset:0;background-image:radial-gradient(#ffffff22 1.2px,transparent 1.3px);background-size:26px 26px;-webkit-mask-image:linear-gradient(#000,transparent 85%);mask-image:linear-gradient(#000,transparent 85%)}
+.aurora .wrap{position:relative}
+.aurora h1{font-family:'Reem Kufi','Cairo',sans-serif;font-size:clamp(44px,8.4vw,100px);line-height:1.1;font-weight:700;color:#fff;margin:0 0 20px}
+.aurora h1 em{display:block;font-style:normal;background:linear-gradient(90deg,#7ff0d0,#8fc2ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.aurora .lead{color:#c9deea;font-size:19px;margin:0 auto;max-width:520px}
+.aurora .actions{justify-content:center;margin-top:34px}
+.btn.big{padding:16px 38px;font-size:18px;border-radius:99px}
+.aurora .btn.big{background:#fff;color:#0a2540;border-color:transparent;box-shadow:0 0 0 8px #ffffff1a,0 18px 40px #0007}
+.lift{margin-top:-72px;position:relative;z-index:2}
+@media(max-width:780px){.aurora{padding:64px 0 120px;border-radius:0 0 34px 34px}.aurora .lead{font-size:17px}.steps{grid-template-columns:1fr}}
+.field select{background:#fff;color:var(--ink);border:2px solid var(--line);border-radius:12px;padding:13px;font:inherit;outline:none}.field select:focus{border-color:var(--teal);box-shadow:0 0 0 4px #0db3a620}a.card{color:inherit;text-decoration:none}.tabs{display:flex;gap:6px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:18px;padding:6px;margin:0 0 18px}
+.tabs button{flex:1;min-width:90px;border:0;background:transparent;color:var(--ink2);padding:10px 14px;border-radius:13px;font-weight:700}
+.tabs button.on{background:var(--grad);color:#fff}
+.fchip{border:1px solid var(--line);background:#fff;color:var(--ink2);border-radius:99px;padding:5px 16px;font-weight:600}.fchip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.erow{display:flex;gap:8px;align-items:center;margin:8px 0;flex-wrap:wrap}
+.erow input,.erow select,.erow textarea{background:#fff;color:var(--ink);border:2px solid var(--line);border-radius:10px;padding:8px 10px;font:inherit;min-width:0}
+.erow .e1{width:64px;text-align:center}.erow .e2{flex:1;min-width:140px}.erow input[type=color]{width:46px;height:42px;padding:2px}
+.wfor{flex-basis:100%;display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:4px 2px 2px}.wfor-l{font-weight:700;color:var(--ink2);font-size:13px}.wchk{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;cursor:pointer}.wchk.on{background:var(--ink);color:#fff;border-color:var(--ink)}.wchk input{width:auto;min-width:0;margin:0;padding:0;accent-color:#0d9488}.wa-big{width:100%;font-size:18px;padding:16px 22px;background:#25d366;border-color:transparent;color:#fff;box-shadow:0 10px 24px rgba(37,211,102,.35);text-decoration:none}.ibtn{border:1px solid var(--line);background:#fff;color:var(--ink2);border-radius:10px;width:36px;height:36px}.ibtn.del{color:#c0392b}
+#botEditor h4,#tab-settings h4{margin:22px 0 4px;color:var(--ink)}
+.dotc{display:inline-block;vertical-align:middle;width:16px;height:16px;border-radius:50%}
+.back{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;color:var(--ink2);border-radius:99px;padding:6px 18px;font-weight:700;margin-bottom:14px}.back:hover{border-color:var(--teal);color:var(--teal2)}
+/* ===== شريط المنصة ===== */
+.plat-wrap{max-width:1120px;margin:14px auto 0;padding:0 20px;perspective:900px}
+.plat{position:relative;display:flex;align-items:center;gap:14px;min-height:64px;padding:12px 18px;border-radius:22px;color:#fff;text-decoration:none;overflow:hidden;isolation:isolate;background:linear-gradient(110deg,#0a2540 0%,#14365c 30%,#0b4fc4 68%,#0db3a6 100%);background-size:220% 100%;box-shadow:0 18px 40px #0a254033,inset 0 0 0 1px #ffffff2b;transition:transform .3s,box-shadow .3s;animation:platIn .95s cubic-bezier(.2,.9,.25,1.12) .25s both,platFlow 10s ease-in-out 1.2s infinite alternate}
+.plat:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,transparent 30%,#ffffff33 50%,transparent 70%);transform:translateX(-130%);animation:platShine 5.5s ease-in-out 1.6s infinite}
+.plat:after{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 10% 15%,#34c77b66,transparent 38%),radial-gradient(circle at 92% 95%,#8ff0e155,transparent 42%)}
+.plat[href]{cursor:pointer}
+.plat[href]:hover{transform:translateY(-3px);box-shadow:0 24px 50px #0db3a64d,inset 0 0 0 1px #ffffff40}
+.plat-ico{flex:none;width:40px;height:40px;display:grid;place-items:center;border-radius:13px;background:#ffffff1f;border:1px solid #ffffff33;backdrop-filter:blur(6px);color:#8ff0e1;animation:platPop 3.2s ease-in-out 1.2s infinite}
+.plat-txt{display:flex;flex-direction:column;gap:1px;min-width:0}
+.plat-txt b{font-size:15.5px;font-weight:800;line-height:1.5}
+.plat-txt span{font-size:13px;color:#d6f5f1;line-height:1.6}
+.plat-txt b:empty,.plat-txt span:empty{display:none}
+.plat.is-empty .plat-txt{display:none}
+.plat-go{flex:none;margin-inline-start:auto;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:#ffffff26;border:1px solid #ffffff3d;transition:.3s}
+.plat-go[hidden]{display:none}
+.plat[href]:hover .plat-go{background:#fff;color:var(--blue2);transform:translateX(-5px)}
+@keyframes platIn{from{opacity:0;transform:translateY(-28px) rotateX(-20deg) scale(.95)}to{opacity:1;transform:none}}
+@keyframes platFlow{to{background-position:100% 0}}
+@keyframes platShine{0%,55%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
+@keyframes platPop{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@media(max-width:780px){.plat-wrap{padding:0 15px;margin-top:10px}.plat{padding:11px 14px;border-radius:18px}.plat-txt b{font-size:14px}.plat-txt span{font-size:12.5px}}
+</style></head>
+<body>
+<header class="topbar"><nav class="nav"><a class="brand" href="#" onclick="showView('home');return false"><span class="logo">ن</span><span>النصر<small>لإنشاء المواقع الإلكترونية</small></span></a><div class="navlinks" id="navlinks"><button class="active" data-view="home" onclick="showView('home')"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><span>الرئيسية</span></button><button data-view="models" onclick="showView('models')"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>نماذج</span></button><button data-view="bot" onclick="startBot()"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01"/></svg><span>اسأل البوت</span></button><button data-view="contact" onclick="showView('contact')"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 8l9 6 9-6"/></svg><span>راسلنا</span></button></div></nav></header>
+<div class="plat-wrap"><a class="plat is-empty" id="platBar" role="group" aria-label="شريط المنصة"><span class="plat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 3.9 5.7 3.9 9s-1.3 6.3-3.9 9c-2.6-2.7-3.9-5.7-3.9-9S9.4 5.7 12 3z"/></svg></span><div class="plat-txt"><b id="platTitle"></b><span id="platText"></span></div><span class="plat-go" id="platGo" hidden aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span></a></div>
+<main id="home" class="view active"><div class="aurora"><div class="wrap"><h1>إبداعٌ يصنع الفرق<em>في المواقع التعليمية</em></h1><p class="lead">نصمّم مواقع تعليمية عصرية تجمع بين الجمال والسهولة وتناسب احتياجاتك.</p><div class="actions"><button class="btn big" onclick="startBot()">اكتشف خدماتنا</button></div></div></div><section class="steps-band lift"><div class="wrap"><ol class="steps"><li><span>✦</span><div><b>تصاميم عصرية</b><small>واجهات أنيقة بلمسات إبداعية</small></div></li><li><span>✓</span><div><b>مواقع سهلة الاستخدام</b><small>تجربة واضحة ومريحة للزوار</small></div></li><li><span>🎓</span><div><b>متخصصون في المواقع التعليمية</b><small>حلول تناسب المدارس والمعلمين والدورات</small></div></li></ol></div></section><section class="section-alt"><div class="wrap"><div class="section-head"><h2>مواقع تعليمية بفكرة عصرية</h2><p>تجربة واضحة تبدأ من اختيار نوع الموقع وتنتهي بملخص اختياراتك.</p></div><div class="cards"><article class="card"><div class="icon">🏫</div><h3>مواقع المدارس</h3><p>واجهة منظمة لعرض معلومات المدرسة وأخبارها وخدماتها التعليمية.</p></article><article class="card"><div class="icon">📚</div><h3>المعاهد والدورات</h3><p>تصاميم لعرض البرامج والدورات والمواد التعليمية بطريقة مرتبة.</p></article><article class="card"><div class="icon">👨‍🏫</div><h3>مواقع المعلمين</h3><p>صفحة شخصية للمعلم تعرض دروسه وأعماله وطرق التواصل معه.</p></article></div></div></section><section><div class="wrap contact-box"><div><h2 style="margin:0 0 5px">ابدأ باختيار فكرتك التعليمية</h2><p>اختيارات بسيطة تساعدك على تحديد ملامح موقعك.</p></div><button class="btn primary" onclick="startBot()">🤖 اسأل البوت الآن</button></div></section></main>
+<section id="models" class="view"><div class="wrap"><button class="back" onclick="goBack()">→ رجوع</button><div class="section-head"><h1 class="page-title">نماذج</h1><p>مواقع أنشأناها. اضغط على أي نموذج لتنتقل إليه مباشرة.</p></div><div class="cards" id="modelsGrid"></div></div></section>
+<section id="bot" class="view"><div class="wrap"><div class="section-head"><h1 class="page-title">🤖 اسأل البوت</h1><p>اختر من البطاقات فقط؛ لا تحتاج إلى كتابة وصف طويل.</p></div><div class="bot-shell"><div class="bot-head"><div class="bot-avatar" id="botLogo">✦</div><div><b>مساعد النصر</b><small>مساعد اختيار التصميم</small></div></div><div class="progress"><div id="progressbar"></div></div><div class="bot-content" id="botContent"></div></div></div></section>
+<section id="contact" class="view"><div class="wrap"><button class="back" onclick="goBack()">→ رجوع</button><div class="section-head"><h1 class="page-title">راسلنا</h1><p>اختر طريقة التواصل المناسبة لك.</p></div><div class="contact-options"><button class="choice" onclick="openWhatsApp()"><span class="em">💬</span><span>التواصل عبر واتساب</span></button><button class="choice" onclick="startBot()"><span class="em">🎨</span><span>اختيار تصميم تعليمي</span></button><button class="choice" onclick="openEmail()"><span class="em">✉️</span><span>البريد الإلكتروني</span></button><button class="choice" onclick="showView('home')"><span class="em">⌂</span><span>العودة للرئيسية</span></button></div></div></section>
+<section id="owner" class="view"><div class="wrap"><button class="back" onclick="goBack()">→ رجوع</button><div class="section-head"><h1 class="page-title">👑 لوحة مالك النصر</h1><p>إدارة طلبات العملاء وبيانات التواصل.</p></div><div id="ownerLogin" class="owner-login"><h3 style="margin-top:0">دخول المالك</h3><div class="field"><label for="ownerEmail">البريد الإلكتروني</label><input id="ownerEmail" type="email" dir="ltr" placeholder="name@example.com" autocomplete="username"></div><div class="field"><label for="ownerPass">كلمة المرور</label><input id="ownerPass" type="password" placeholder="أدخل كلمة المرور" autocomplete="current-password"></div><button class="btn primary" id="ownerLoginBtn" style="width:100%" onclick="ownerLogin()">دخول لوحة التحكم</button><div class="notice">الدخول خاص بالمالك فقط، والتحقق يتم عبر الخادم.</div></div><div id="ownerDashboard" hidden>
+<div class="owner-grid"><div class="stat"><strong id="statRequests">0</strong><span>إجمالي الطلبات</span></div><div class="stat"><strong id="statNew">0</strong><span>طلبات جديدة</span></div><div class="stat"><strong id="statSites">0</strong><span>مواقع في النماذج</span></div></div>
+<div class="tabs"><button data-tab="requests" onclick="ownerTab('requests')">الطلبات</button><button data-tab="bot" onclick="ownerTab('bot')">أسئلة البوت</button><button data-tab="sites" onclick="ownerTab('sites')">النماذج</button><button data-tab="settings" onclick="ownerTab('settings')">الإعدادات</button></div>
+<div id="tab-requests" class="card"><h3>الطلبات</h3><div class="erow"><button class="fchip" data-f="all" onclick="setFilter('all')">الكل</button><button class="fchip" data-f="new" onclick="setFilter('new')">جديد</button><button class="fchip" data-f="doing" onclick="setFilter('doing')">قيد التنفيذ</button><button class="fchip" data-f="done" onclick="setFilter('done')">جاهز</button><button class="btn secondary" style="margin-right:auto;padding:6px 16px" onclick="loadReqs()">🔄 تحديث</button><button class="btn secondary" style="padding:6px 16px" onclick="exportCsv()">تصدير Excel</button></div><div id="ownerRequests"></div><div class="notice">الطلبات محفوظة في قاعدة البيانات ويمكنك رؤيتها من أي جهاز بعد تسجيل الدخول.</div></div>
+<div id="tab-bot" class="card" hidden><h3>أسئلة البوت</h3><p class="subtext">عدّل النصوص وأنواع المواقع والخيارات والألوان، ورتّبها بالأسهم. اضغط «حفظ» ليظهر التعديل في البوت.</p><div id="botEditor"></div><div class="actions"><button class="btn primary" onclick="saveBotCfg()">حفظ التغييرات</button><button class="btn secondary" onclick="resetBotCfg()">استعادة الافتراضي</button></div></div>
+<div id="tab-sites" class="card" hidden><h3>إدارة النماذج (مواقعي)</h3><p class="subtext">كل موقع تضيفه يظهر في صفحة النماذج، وبالضغط عليه ينتقل الزائر إلى رابطه.</p>
+<div class="field"><label for="sName">اسم الموقع</label><input id="sName" autocomplete="off"></div><div class="field"><label for="sDesc">وصف قصير</label><input id="sDesc" autocomplete="off"></div><div class="field"><label for="sUrl">رابط الموقع</label><input id="sUrl" dir="ltr" placeholder="https://example.com" autocomplete="off"></div><div class="field"><label for="sColor">لون البطاقة</label><select id="sColor"><option value="teal">تيلون</option><option value="blue">أزرق</option><option value="green">أخضر</option></select></div>
+<div class="actions"><button class="btn primary" id="sSave" onclick="saveSite()">إضافة الموقع</button><button class="btn secondary" onclick="resetSiteForm()">إلغاء</button></div><div id="ownerSites" style="margin-top:14px"></div><button class="btn secondary" onclick="copySites()">نسخ قائمة المواقع</button><div class="notice">المواقع المضافة هنا تُحفظ في قاعدة البيانات وتظهر لكل الزوار في صفحة النماذج.</div></div>
+<div id="tab-settings" class="card" hidden><h3>الإعدادات</h3><h4>بيانات التواصل</h4><p class="subtext">رقم واتساب يظهر للزوار في صفحة «راسلنا» وبعد إرسال الطلب. اكتبه بالصيغة الدولية بدون + (مثال: 249XXXXXXXXX).</p><div class="field"><label for="setWa">رقم واتساب</label><input id="setWa" dir="ltr" inputmode="numeric" placeholder="249XXXXXXXXX" autocomplete="off"></div><div class="field"><label for="setEmail">البريد الإلكتروني للتواصل (اختياري)</label><input id="setEmail" type="email" dir="ltr" autocomplete="off"></div><button class="btn secondary" onclick="saveSettings()">حفظ بيانات التواصل</button>
+<h4>شريط المنصة</h4><p class="subtext">شريط أفقي يظهر تحت الشعار لكل الزوار. اتركه فارغًا ليبقى بدون نص، أو اكتب عنوانًا ونصًا وضع رابط منصتك ليصبح الشريط قابلًا للضغط.</p><div class="field"><label for="setPlatTitle">العنوان</label><input id="setPlatTitle" maxlength="60" autocomplete="off"></div><div class="field"><label for="setPlatText">النص</label><input id="setPlatText" maxlength="140" autocomplete="off"></div><div class="field"><label for="setPlatUrl">رابط المنصة</label><input id="setPlatUrl" dir="ltr" placeholder="https://" autocomplete="off"></div><div class="actions" style="margin-top:0"><button class="btn secondary" onclick="savePlatform()">حفظ الشريط</button><button class="btn secondary" onclick="clearPlatform()">مسح الشريط</button></div>
+<h4>كلمة مرور الدخول</h4><div class="field"><label for="newPass">كلمة مرور جديدة (٨ أحرف على الأقل)</label><input id="newPass" type="password" autocomplete="new-password"></div><button class="btn secondary" onclick="setPass()">حفظ كلمة المرور</button>
+<h4>نسخة احتياطية</h4><p class="subtext">انسخ بياناتك (الطلبات والمواقع وأسئلة البوت) لتحتفظ بها.</p><button class="btn secondary" onclick="backup()">نسخ البيانات</button>
+<h4>الخروج</h4><button class="btn secondary" onclick="ownerLogout()">تسجيل الخروج</button><div class="notice">جميع البيانات (الطلبات، أسئلة البوت، النماذج، بيانات التواصل، شريط المنصة) محفوظة في قاعدة البيانات.</div></div>
+</div></div></section>
+<footer class="footer"><b>النصر</b> لإنشاء المواقع الإلكترونية · تصاميم تعليمية عصرية</footer><div class="toast" id="toast"></div>
+<script>
+// ===== Supabase =====
+const SB_URL='https://omudeovyaihklczvqwyj.supabase.co',SB_KEY='sb_publishable_QBXO5rdtI1hpGFvGmVsong_0HHEZmRL';
+// رقم واتساب احتياطي (صيغة دولية بدون +). يُستبدل برقم لوحة المالك إذا كان محفوظًا في قاعدة البيانات.
+const WA_FALLBACK='';
+const SESS_KEY='nasrSession';let session=null;try{session=JSON.parse(localStorage.getItem(SESS_KEY)||'null')}catch(e){}
+function saveSession(s){session=s;try{s?localStorage.setItem(SESS_KEY,JSON.stringify(s)):localStorage.removeItem(SESS_KEY)}catch(e){}}
+function toSession(j){return{access_token:j.access_token,refresh_token:j.refresh_token,expires_at:Date.now()+(j.expires_in||3600)*1000,email:(j.user&&j.user.email)||(session&&session.email)||''}}
+async function sbFetch(path,opt={},auth=false){const ctl=new AbortController(),tm=setTimeout(()=>ctl.abort(),15000);try{const h={apikey:SB_KEY,'Content-Type':'application/json',...(opt.headers||{})};if(auth&&session)h.Authorization='Bearer '+session.access_token;return await fetch(SB_URL+path,{...opt,headers:h,signal:ctl.signal})}finally{clearTimeout(tm)}}
+async function refreshSession(){if(!session||!session.refresh_token)return false;try{const r=await sbFetch('/auth/v1/token?grant_type=refresh_token',{method:'POST',body:JSON.stringify({refresh_token:session.refresh_token})});if(!r.ok){if(r.status>=400&&r.status<500)saveSession(null);return false}saveSession(toSession(await r.json()));return true}catch(e){return false}}
+async function authFetch(path,opt){if(!session)throw new Error('no-session');if(session.expires_at-Date.now()<60000)await refreshSession();if(!session)throw new Error('no-session');let r=await sbFetch(path,opt,true);if(r.status===401&&await refreshSession())r=await sbFetch(path,opt,true);return r}
+
+// ===== شريط المنصة =====
+let platData={title:'',text:'',url:''};
+function renderPlatform(p){const t=(p.title||'').trim(),x=(p.text||'').trim(),u=safeUrl(p.url||''),bar=document.getElementById('platBar'),go=document.getElementById('platGo');if(!bar)return;document.getElementById('platTitle').textContent=t;document.getElementById('platText').textContent=x;bar.classList.toggle('is-empty',!t&&!x);if(u){bar.href=u;bar.target='_blank';bar.rel='noopener';go.hidden=false}else{bar.removeAttribute('href');bar.removeAttribute('target');bar.removeAttribute('rel');go.hidden=true}}
+async function loadPlatform(){try{const r=await sbFetch('/rest/v1/site_settings?select=platform_title,platform_text,platform_url&id=eq.1');if(!r.ok)return;const j=await r.json();if(j[0]){platData={title:j[0].platform_title||'',text:j[0].platform_text||'',url:j[0].platform_url||''};renderPlatform(platData)}}catch(e){}}
+function fillPlatformForm(){const a=document.getElementById('setPlatTitle');if(!a)return;a.value=platData.title;document.getElementById('setPlatText').value=platData.text;document.getElementById('setPlatUrl').value=platData.url}
+async function savePlatform(){const title=document.getElementById('setPlatTitle').value.trim().slice(0,60),text=document.getElementById('setPlatText').value.trim().slice(0,140),raw=document.getElementById('setPlatUrl').value.trim(),url=raw?safeUrl(raw):'';if(raw&&!url)return toast('رابط المنصة غير صحيح.');try{const r=await authFetch('/rest/v1/site_settings?on_conflict=id',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify({id:1,platform_title:title,platform_text:text,platform_url:url,updated_at:new Date().toISOString()})});if(!r.ok)throw new Error(r.status);const j=await r.json();if(!j.length)throw new Error('empty');platData={title,text,url};renderPlatform(platData);fillPlatformForm();toast('تم حفظ شريط المنصة ✓')}catch(e){if(e&&e.message==='no-session')ownerLogout();toast('تعذّر الحفظ. شغّل أمر SQL الخاص بالشريط وتأكد أنك مسجّل بحساب المالك.')}}
+function clearPlatform(){['setPlatTitle','setPlatText','setPlatUrl'].forEach(id=>document.getElementById(id).value='');savePlatform()}
+// ===== واتساب والبريد =====
+let waNumber='',waRaw='',contactEmail='';
+function cleanWa(v){let d=String(v||'').replace(/[\s\-().]/g,'').replace(/^\+/,'').replace(/^00/,'');return /^[1-9]\d{7,14}$/.test(d)?d:''}
+waNumber=cleanWa(WA_FALLBACK);
+const WA_DEFAULT_MSG='السلام عليكم، أرغب في الاستفسار عن إنشاء موقع تعليمي من النصر.';
+function openWhatsApp(txt){if(!waNumber)return toast('رقم واتساب لم يُضف بعد. يضيفه المالك من لوحة التحكم.');const u='https://wa.me/'+waNumber+'?text='+encodeURIComponent(txt||WA_DEFAULT_MSG);if(!window.open(u,'_blank','noopener'))location.href=u}
+function openEmail(){if(!contactEmail)return toast('البريد الإلكتروني لم يُضف بعد.');location.href='mailto:'+contactEmail}
+async function loadSettings(){try{const r=await sbFetch('/rest/v1/site_settings?select=whatsapp_number,contact_email&id=eq.1');if(!r.ok)return;const j=await r.json();if(j[0]){waRaw=j[0].whatsapp_number||'';waNumber=cleanWa(waRaw)||waNumber;contactEmail=j[0].contact_email||''}}catch(e){}}
+function fillSettings(){fillPlatformForm();document.getElementById('setWa').value=waRaw||waNumber;document.getElementById('setEmail').value=contactEmail}
+async function saveSettings(){const raw=document.getElementById('setWa').value.trim(),email=document.getElementById('setEmail').value.trim(),wa=raw?cleanWa(raw):'';if(raw&&!wa)return toast('رقم واتساب غير صحيح. اكتبه بالصيغة الدولية بدون + وبدون صفر في البداية.');if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))return toast('البريد الإلكتروني غير صحيح.');try{const r=await authFetch('/rest/v1/site_settings?on_conflict=id',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify({id:1,whatsapp_number:wa,contact_email:email,updated_at:new Date().toISOString()})});if(!r.ok)throw new Error(r.status);const j=await r.json();if(!j.length)throw new Error('empty');waRaw=wa;waNumber=wa;contactEmail=email;toast('تم حفظ بيانات التواصل ✓')}catch(e){toast('تعذّر الحفظ. تأكد من تشغيل ملف SQL ومن أنك مسجّل بحساب المالك.')}}
+let curView='home',backing=false;const viewStack=[];const views=['home','models','bot','contact','owner'];let botStep=0;const picks={type:'',wants:[],note:'',colors:[]};
+function showView(id){if(id!==curView){if(!backing)viewStack.push(curView);curView=id}backing=false;views.forEach(v=>{const el=document.getElementById(v);if(el)el.classList.toggle('active',v===id)});document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===id));document.querySelector('.navlinks').classList.remove('open');window.scrollTo({top:0,behavior:'smooth'});if(id==='bot')renderBot();if(id==='models')renderModels();if(id==='owner')resumeOwner()}
+function goBack(){let p=viewStack.pop();while(p===curView)p=viewStack.pop();backing=true;showView(p||'home')}
+function startBot(){botStep=0;Object.assign(picks,{type:'',wants:[],note:'',colors:[]});showView('bot');renderBot()}
+function chooseModel(type){picks.type=type;botStep=1;showView('bot');renderBot()}
+const W=(l,f)=>l.map(([e,t])=>({e,t,for:[f]}));
+const DEFAULT_CFG={v:2,texts:{welcome:'👋 أهلًا بك في النصر لإنشاء المواقع الإلكترونية! ثلاث خطوات بسيطة ونعرف ما تحتاجه.',q1:'ما نوع الموقع الذي تريده؟',q2:'ما الذي تريده من الموقع؟',hint2:'اختر ما يناسبك، ويمكنك أيضًا أن تكتب بكلماتك.',q3:'أي لون يناسب موقعك؟'},
+types:[{id:'school',e:'🏫',t:'موقع مدرسة'},{id:'inst',e:'🎓',t:'موقع معهد تعليمي'},{id:'courses',e:'📚',t:'موقع تعليمي للدورات'},{id:'teacher',e:'👨‍🏫',t:'موقع لمعلم'},{id:'exams',e:'📝',t:'موقع للاختبارات التعليمية'},{id:'curr',e:'📖',t:'موقع للمناهج والمواد التعليمية'},{id:'full',e:'🏆',t:'موقع تعليمي متكامل'}],
+wants:[...W([['👩‍💼','متابعة المديرة للمعلمات'],['🗓️','جدول الحصص والمناوبات'],['✅','حضور وانصراف المعلمات'],['📊','تقارير وإنجازات'],['👪','تواصل مع أولياء الأمور'],['🏅','نتائج الطالبات'],['📣','أخبار وإعلانات المدرسة'],['🖼️','معرض الصور']],'school'),...W([['🎓','عرض البرامج والتخصصات'],['📝','التسجيل في البرامج'],['🗓️','جدول المحاضرات'],['📜','شهادات المتدربين'],['📣','الأخبار والإعلانات'],['🖼️','معرض الصور'],['💬','تواصل سريع عبر واتساب']],'inst'),...W([['📚','قائمة الدورات'],['💳','التسجيل والدفع'],['🗓️','مواعيد الدورات'],['📜','شهادات إتمام الدورة'],['⭐','آراء المتدربين'],['💬','تواصل سريع عبر واتساب']],'courses'),...W([['👤','صفحة شخصية وسيرة المعلم'],['🎥','دروس وشروحات'],['📅','حجز حصة'],['📎','ملفات ومواد للتحميل'],['⭐','آراء الطلاب'],['💬','تواصل سريع عبر واتساب']],'teacher'),...W([['❓','بنك الأسئلة'],['🧪','اختبارات تفاعلية'],['⚡','نتائج فورية'],['✔️','تصحيح تلقائي'],['📊','تقارير الأداء'],['🔐','تسجيل دخول الطلاب']],'exams'),...W([['📖','المناهج حسب الصف'],['📄','ملفات للتحميل'],['📝','ملخصات ومراجعات'],['🎥','فيديوهات الشرح'],['✏️','الواجبات'],['🔎','بحث في المواد']],'curr'),...W([['👩‍💼','لوحة المديرة ومتابعة المعلمات'],['👩‍🏫','صفحات المعلمات'],['🎓','بوابة الطلاب'],['📝','الاختبارات'],['📖','المناهج'],['📣','الأخبار وأولياء الأمور']],'full')],
+colors:[['#2563eb','أزرق ملكي'],['#0d9488','تيلون'],['#10b981','أخضر نعناعي'],['#7c3aed','بنفسجي'],['#ec4899','وردي'],['#f97316','برتقالي'],['#d4a017','ذهبي'],['#1e3a8a','كحلي']].map(([c,n])=>({c,n}))};
+const clone=o=>JSON.parse(JSON.stringify(o));
+function validCfg(c){return !!(c&&c.v===2&&c.texts&&Array.isArray(c.types)&&Array.isArray(c.wants)&&Array.isArray(c.colors))}
+// ترحيل البيانات القديمة: w.for كان نصًا ('' = الكل) وأصبح مصفوفة معرّفات ([] = كل الأنواع)
+function normalizeCfg(c){const ids=new Set((c.types||[]).map(x=>x.id));c.wants.forEach(w=>{let f=Array.isArray(w.for)?w.for:(w.for?[w.for]:[]);w.for=[...new Set(f.filter(id=>ids.has(id)))]});return c}
+function loadCfg(){try{const c=JSON.parse(localStorage.getItem('nasrBotCfg'));if(validCfg(c))return normalizeCfg(c)}catch(e){}return normalizeCfg(clone(DEFAULT_CFG))}
+let cfg=loadCfg(),draft=null,botCfgLoaded=false;
+async function loadBotCfgFromDB(){try{const r=await sbFetch('/rest/v1/bot_settings?select=id,config&id=eq.1');if(!r.ok)throw new Error('HTTP '+r.status);const rows=await r.json();if(rows.length&&validCfg(rows[0].config)){cfg=normalizeCfg(clone(rows[0].config));botCfgLoaded=true;try{localStorage.setItem('nasrBotCfg',JSON.stringify(cfg))}catch(e){}if(draft)draft=clone(cfg);if(document.getElementById('tab-bot')&&!document.getElementById('tab-bot').hidden)renderBotEditor();if(document.getElementById('bot').classList.contains('active'))renderBot();return true;}botCfgLoaded=true;return false;}catch(e){console.warn('تعذر تحميل إعدادات البوت من قاعدة البيانات:',e);return false}}
+function escapeHtml(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function wantTypes(w){return Array.isArray(w.for)?w.for:(w.for?[w.for]:[])}
+function getWants(){const cur=cfg.types.find(x=>x.t===picks.type);return cfg.wants.filter(w=>{const ids=wantTypes(w);if(!ids.length)return true;return !!cur&&ids.includes(cur.id)})}
+function renderBot(){const root=document.getElementById('botContent'),pb=document.getElementById('progressbar'),T=cfg.texts;let out='';
+if(botStep===0){pb.style.width='33%';out=`<div class="bot-message">${escapeHtml(T.welcome)}</div><h3>١. ${escapeHtml(T.q1)}</h3><div class="choice-grid">${cfg.types.map((x,i)=>`<button class="choice ${picks.type===x.t?'selected':''}" onclick="pickType(${i})"><span class="em">${escapeHtml(x.e)}</span><span>${escapeHtml(x.t)}</span></button>`).join('')}</div>`}
+else if(botStep===1){pb.style.width='66%';out=`<div class="bot-message">نوع الموقع: <b>${escapeHtml(picks.type)}</b></div><h3>٢. ${escapeHtml(T.q2)}</h3><p class="subtext">${escapeHtml(T.hint2)}</p><div class="choice-grid">${getWants().map((x,i)=>`<button class="choice ${picks.wants.includes(x.t)?'selected':''}" onclick="toggleWant(${i})"><span class="em">${escapeHtml(x.e)}</span><span>${escapeHtml(x.t)}</span></button>`).join('')}</div><div class="field"><label for="wantNote">أو اكتب ما تريده</label><textarea id="wantNote" rows="3" maxlength="1000" oninput="picks.note=this.value">${escapeHtml(picks.note)}</textarea></div>`}
+else{pb.style.width='100%';out=`<h3>٣. ${escapeHtml(T.q3)}</h3><p class="subtext">يمكنك اختيار أكثر من لون.</p><div class="cdots">${cfg.colors.map((x,i)=>`<button class="cdot ${picks.colors.includes(x.c)?'selected':''}" onclick="pickColor(${i})" aria-label="${escapeHtml(x.n)}"><span style="background:${escapeHtml(x.c)}"></span>${escapeHtml(x.n)}</button>`).join('')}</div>`}
+let nav='';nav+=botStep>0?'<button class="btn secondary" onclick="botStep--;renderBot()">→ السابق</button>':'<button class="btn secondary" onclick="goBack()">→ رجوع</button>';if(botStep<2)nav+='<button class="btn primary" onclick="nextBot()">التالي ←</button>';else nav+='<button class="btn primary" onclick="showSummary()">✓ مراجعة الاختيارات</button>';
+root.innerHTML=out+'<div class="bot-actions">'+nav+'</div>'}
+function pickType(i){const t=cfg.types[i].t;if(picks.type!==t)picks.wants=[];picks.type=t;botStep=1;renderBot()}
+function toggleWant(i){const t=getWants()[i].t;picks.wants=picks.wants.includes(t)?picks.wants.filter(x=>x!==t):[...picks.wants,t];renderBot()}
+function pickColor(i){const c=cfg.colors[i].c;picks.colors=picks.colors.includes(c)?picks.colors.filter(x=>x!==c):[...picks.colors,c];renderBot()}
+function pickedColors(){return picks.colors.map(c=>cfg.colors.find(x=>x.c===c)||{c,n:c})}
+function nextBot(){if(botStep===0&&!picks.type)return toast('اختر نوع الموقع أولًا.');if(botStep===1&&!picks.wants.length&&!picks.note.trim())return toast('اختر ما تريده أو اكتبه.');botStep++;renderBot()}
+function showSummary(){if(!picks.colors.length)return toast('اختر لونًا واحدًا على الأقل.');const cs=pickedColors();document.getElementById('botContent').innerHTML=`<div class="bot-message">🎉 اكتملت اختياراتك! راجعها قبل التأكيد.</div><div class="summary"><h3 style="margin-top:0">ملخص طلبك</h3><p><b>نوع الموقع:</b> ${escapeHtml(picks.type)}</p><p><b>المطلوب:</b> ${picks.wants.map(escapeHtml).join('، ')||'—'}</p>${picks.note.trim()?'<p><b>ملاحظتك:</b> '+escapeHtml(picks.note)+'</p>':''}<p><b>الألوان:</b> ${cs.map(c=>`<i style="display:inline-block;vertical-align:middle;width:22px;height:22px;border-radius:50%;background:${escapeHtml(c.c)}"></i> ${escapeHtml(c.n)}`).join(' &nbsp; ')}</p></div><div class="bot-actions"><button class="btn secondary" onclick="botStep=2;renderBot()">→ السابق</button><button class="btn primary" onclick="saveRequest()">✓ تأكيد الطلب</button></div>`}
+function reqWaText(){const cs=pickedColors();return 'السلام عليكم، أرسلت طلبًا من موقع النصر وأرغب في تأكيده.\n\n📌 نوع الموقع: '+picks.type+'\n✅ الخيارات المطلوبة: '+(picks.wants.join('، ')||'—')+'\n📝 الملاحظات: '+(picks.note.trim()||'—')+'\n🎨 الألوان: '+(cs.map(c=>c.n).join('، ')||'—')}
+function reqWaUrl(){return waNumber?'https://wa.me/'+waNumber+'?text='+encodeURIComponent(reqWaText()):''}
+let sending=false;
+async function saveRequest(){if(sending)return;sending=true;const cs=pickedColors(),root=document.getElementById('botContent');const body={site_type:picks.type,desired_features:[...picks.wants],customer_note:picks.note.trim().slice(0,1000),colors:cs.map(c=>({c:c.c,n:c.n})),status:'new',owner_notes:''};root.innerHTML='<div class="bot-message">⏳ جارٍ إرسال طلبك…</div>';
+try{const r=await sbFetch('/rest/v1/customer_requests',{method:'POST',headers:{Prefer:'return=minimal'},body:JSON.stringify(body)});if(r.status!==201)throw new Error('HTTP '+r.status);
+if(!waNumber)await loadSettings();const waUrl=reqWaUrl();
+root.innerHTML=`<div class="bot-message"><h3 style="margin-top:0">وصل طلبك إلينا ✓</h3><p class="subtext">تم حفظ طلبك بنجاح. لتأكيد طلبك بسرعة اضغط الزر التالي وستصلنا تفاصيله كاملة في رسالة جاهزة.</p><div class="actions" style="margin-top:18px">${waUrl?`<a class="btn wa-big" href="${escapeHtml(waUrl)}" target="_blank" rel="noopener">💬 تواصل عبر واتساب لتأكيد طلبك</a>`:`<button class="btn wa-big" onclick="toast('رقم واتساب لم يُضف بعد. يضيفه المالك من لوحة التحكم.')">💬 تواصل عبر واتساب لتأكيد طلبك</button>`}<button class="btn secondary" onclick="showView('home')">الرئيسية</button><button class="btn secondary" onclick="showView('models')">النماذج</button></div></div>`;toast('تم إرسال طلبك ✓')}
+catch(e){root.innerHTML=`<div class="bot-message"><h3 style="margin-top:0">تعذّر إرسال الطلب</h3><p class="subtext">لم يصل طلبك بعد. تأكد من الاتصال بالإنترنت ثم حاول مرة أخرى؛ اختياراتك ما زالت محفوظة.</p><div class="actions"><button class="btn primary" onclick="saveRequest()">🔁 إعادة المحاولة</button><button class="btn secondary" onclick="showSummary()">→ رجوع للملخص</button></div></div>`;toast('لم يتم إرسال الطلب.')}
+finally{sending=false}}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000)}
+// Hidden owner entry: tap the bot logo 12 times.
+let logoTaps=0,logoTimer;document.getElementById('botLogo').addEventListener('click',()=>{logoTaps++;clearTimeout(logoTimer);logoTimer=setTimeout(()=>{logoTaps=0},3000);if(logoTaps>=12){logoTaps=0;showView('owner')}});
+// بوابة المالك: المصادقة عبر Supabase Auth، والحماية الفعلية بسياسات RLS في قاعدة البيانات.
+function openOwner(silent){loadSitesFromDB();document.getElementById('ownerLogin').hidden=true;document.getElementById('ownerDashboard').hidden=false;renderOwner();ownerTab('requests');loadReqs();if(!silent)toast('أهلًا بك في لوحة المالك.')}
+async function verifyOwner(){try{const r=await authFetch('/rest/v1/rpc/is_owner',{method:'POST',body:'{}'});return r.ok&&(await r.json())===true}catch(e){return false}}
+async function resumeOwner(){if(!session||!document.getElementById('ownerDashboard').hidden)return;if(await verifyOwner())openOwner(true)}
+async function ownerLogin(){const email=document.getElementById('ownerEmail').value.trim(),pass=document.getElementById('ownerPass').value,btn=document.getElementById('ownerLoginBtn');if(!email||!pass)return toast('اكتب البريد وكلمة المرور.');btn.disabled=true;try{const r=await sbFetch('/auth/v1/token?grant_type=password',{method:'POST',body:JSON.stringify({email,password:pass})});if(!r.ok)return toast(r.status===400?'البريد أو كلمة المرور غير صحيحة.':'تعذّر تسجيل الدخول. حاول مرة أخرى.');saveSession(toSession(await r.json()));if(!(await verifyOwner())){saveSession(null);return toast('هذا الحساب ليس حساب المالك.')}document.getElementById('ownerPass').value='';openOwner()}catch(e){toast('تعذّر الاتصال بالإنترنت.')}finally{btn.disabled=false}}
+async function ownerLogout(){try{if(session)await sbFetch('/auth/v1/logout',{method:'POST'},true)}catch(e){}saveSession(null);reqCache=[];document.getElementById('ownerLogin').hidden=false;document.getElementById('ownerDashboard').hidden=true;document.getElementById('ownerPass').value=''}
+// ===== النماذج = مواقع المالك =====
+// لتثبيت موقع لكل الزوار ضعه هنا: {id:'b1',name:'اسم الموقع',desc:'وصف قصير',url:'https://...',color:'teal'}  (color: teal | blue | green)
+const BASE_SITES=[];
+const siteColors={teal:['تيلون',''],blue:['أزرق','blue'],green:['أخضر','gold']};
+let editingSite=null;
+function storedSites(){try{return JSON.parse(localStorage.getItem('nasrSites')||'[]')}catch(e){return[]}}
+// ===== النماذج من قاعدة البيانات (جدول model_sites) =====
+let siteCache=[],sitesLoaded=false,sitesError=false;
+try{const c=JSON.parse(localStorage.getItem('nasrSitesCache')||'[]');if(Array.isArray(c))siteCache=c}catch(e){}
+function siteFromRow(r){return{id:String(r.id),name:r.name||'',desc:r.description||'',url:r.url||'',color:siteColors[r.color]?r.color:'teal'}}
+async function loadSitesFromDB(){try{const r=await sbFetch('/rest/v1/model_sites?select=id,name,description,url,color&order=sort_order.asc,created_at.desc&limit=500');if(!r.ok)throw new Error('HTTP '+r.status);siteCache=(await r.json()).map(siteFromRow);sitesError=false;try{localStorage.setItem('nasrSitesCache',JSON.stringify(siteCache))}catch(e){}}catch(e){sitesError=true;console.warn('تعذر تحميل النماذج من قاعدة البيانات:',e)}finally{sitesLoaded=true;renderModels();if(document.getElementById('ownerSites'))renderOwnerSites()}}
+function loadSites(){return [...BASE_SITES,...siteCache]}
+function safeUrl(u){u=String(u).trim();if(!u)return'';if(!/^https?:\/\//i.test(u))u='https://'+u;try{const x=new URL(u);return(x.protocol==='http:'||x.protocol==='https:')?x.href:''}catch(e){return''}}
+function hostOf(u){try{return new URL(u).hostname}catch(e){return''}}
+function renderModels(){const g=document.getElementById('modelsGrid'),l=loadSites();if(!l.length){g.innerHTML='<p class="subtext" style="grid-column:1/-1;text-align:center">'+(!sitesLoaded?'جارٍ تحميل النماذج…':sitesError?'تعذّر تحميل النماذج. تحقق من الاتصال ثم أعد فتح الصفحة.':'ستُضاف مواقعنا هنا قريبًا.')+'</p>';return}g.innerHTML=l.map(s=>`<a class="card model-preview" href="${escapeHtml(s.url)}" target="_blank" rel="noopener"><div class="mini-site ${(siteColors[s.color]||['',''])[1]}"><span>${escapeHtml(hostOf(s.url))}</span><b>${escapeHtml(s.name)}</b><div class="mini-bar"></div></div><h3>${escapeHtml(s.name)}</h3><p>${escapeHtml(s.desc||'')}</p><span class="btn secondary">فتح الموقع ↗</span></a>`).join('')}
+function renderOwnerSites(){document.getElementById('statSites').textContent=loadSites().length;const root=document.getElementById('ownerSites'),base=BASE_SITES.map(s=>s.id),l=loadSites();const oldN=storedSites().length,mig=oldN?`<div class="notice" style="margin:10px 0">يوجد ${oldN} موقع قديم محفوظ في هذا المتصفح فقط. <button class="btn secondary" style="padding:6px 14px;margin-top:8px" onclick="migrateLocalSites()">نقلها إلى قاعدة البيانات</button></div>`:'';root.innerHTML=mig+(sitesError&&!l.length?'<p class="subtext">تعذّر تحميل المواقع. تأكد من تشغيل ملف SQL.</p>':'')+(l.length?l.map(s=>`<div class="summary" style="margin:10px 0"><b>${escapeHtml(s.name)}</b> <span class="subtext" dir="ltr">${escapeHtml(s.url)}</span><div class="actions" style="margin-top:8px">${base.includes(s.id)?'<span class="subtext">مثبّت في الملف</span>':`<button class="btn secondary" onclick="editSite('${s.id}')">تعديل</button><button class="btn secondary" onclick="delSite('${s.id}')">حذف</button>`}</div></div>`).join(''):(sitesError?'':'<p class="subtext">لا توجد مواقع مضافة بعد.</p>'))}
+function resetSiteForm(){editingSite=null;['sName','sDesc','sUrl'].forEach(i=>document.getElementById(i).value='');document.getElementById('sColor').value='teal';document.getElementById('sSave').textContent='إضافة الموقع'}
+let savingSite=false;
+async function saveSite(){if(savingSite)return;const name=document.getElementById('sName').value.trim().slice(0,120),url=safeUrl(document.getElementById('sUrl').value),color=document.getElementById('sColor').value;if(!name)return toast('اكتب اسم الموقع.');if(!url)return toast('اكتب رابطًا صحيحًا للموقع.');if(!session)return toast('سجّل دخولك بحساب المالك أولًا.');const row={name,description:document.getElementById('sDesc').value.trim().slice(0,300),url,color:siteColors[color]?color:'teal'};savingSite=true;try{let r;if(editingSite){row.updated_at=new Date().toISOString();r=await authFetch('/rest/v1/model_sites?id=eq.'+encodeURIComponent(editingSite),{method:'PATCH',headers:{Prefer:'return=representation'},body:JSON.stringify(row)})}else{r=await authFetch('/rest/v1/model_sites',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify(row)})}if(!r.ok)throw new Error('HTTP '+r.status);const j=await r.json();if(!j.length)throw new Error('no-rows');const s=siteFromRow(j[0]),was=editingSite;siteCache=was?siteCache.map(x=>x.id===was?s:x):[s,...siteCache];try{localStorage.setItem('nasrSitesCache',JSON.stringify(siteCache))}catch(e){}resetSiteForm();renderOwnerSites();renderModels();toast(was?'تم تعديل الموقع ✓':'تمت إضافة الموقع إلى النماذج ✓')}catch(e){if(e.message==='no-session')ownerLogout();console.error(e);toast('تعذّر الحفظ في قاعدة البيانات. تأكد من تشغيل ملف SQL ومن أنك مسجّل بحساب المالك.')}finally{savingSite=false}}
+async function delSite(id){if(!confirm('حذف هذا الموقع من النماذج؟'))return;try{const r=await authFetch('/rest/v1/model_sites?id=eq.'+encodeURIComponent(id),{method:'DELETE',headers:{Prefer:'return=representation'}});if(!r.ok)throw new Error('HTTP '+r.status);const j=await r.json();if(!j.length)throw new Error('no-rows');siteCache=siteCache.filter(x=>x.id!==id);try{localStorage.setItem('nasrSitesCache',JSON.stringify(siteCache))}catch(e){}if(editingSite===id)resetSiteForm();renderOwnerSites();renderModels();toast('تم الحذف.')}catch(e){if(e.message==='no-session')ownerLogout();toast('تعذّر الحذف. تحقق من الاتصال وصلاحيات المالك.')}}
+// نقل المواقع القديمة المحفوظة في هذا المتصفح إلى قاعدة البيانات (مرة واحدة)
+async function migrateLocalSites(){const old=storedSites().filter(s=>s&&s.name&&safeUrl(s.url));if(!old.length)return toast('لا توجد مواقع قديمة للنقل.');if(!session)return toast('سجّل دخولك بحساب المالك أولًا.');try{const rows=old.map(s=>({name:String(s.name).slice(0,120),description:String(s.desc||'').slice(0,300),url:safeUrl(s.url),color:siteColors[s.color]?s.color:'teal'}));const r=await authFetch('/rest/v1/model_sites',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify(rows)});if(!r.ok)throw new Error('HTTP '+r.status);const j=await r.json();if(j.length!==rows.length)throw new Error('partial');try{localStorage.removeItem('nasrSites')}catch(e){}await loadSitesFromDB();toast('تم نقل '+j.length+' موقع إلى قاعدة البيانات ✓')}catch(e){console.error(e);toast('تعذّر النقل. تأكد من تشغيل ملف SQL ومن أنك مسجّل بحساب المالك.')}}
+function copySites(){const t=JSON.stringify(loadSites(),null,1);(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast('تم نسخ قائمة المواقع.'),()=>toast('تعذّر النسخ.'))}
+renderModels();loadSettings();loadPlatform();loadBotCfgFromDB();loadSitesFromDB();
+// ===== لوحة المالك: الطلبات + محرر البوت + الإعدادات =====
+let reqFilter='all';const stLabels={new:'جديد',doing:'قيد التنفيذ',done:'جاهز'};
+const ST_TO_DB={new:'new',doing:'in_progress',done:'completed'},ST_FROM_DB={new:'new',in_progress:'doing',completed:'done'};
+let reqCache=[],reqLoading=false,reqError=false;
+function fromRow(r){const cs=Array.isArray(r.colors)?r.colors:[];return{id:r.id,date:r.created_at?new Date(r.created_at).toLocaleString('ar'):'',type:r.site_type||'',wants:Array.isArray(r.desired_features)?r.desired_features:[],note:r.customer_note||'',colors:cs,color:cs.map(c=>c.n).join('، '),hex:cs[0]?cs[0].c:'',status:ST_FROM_DB[r.status]||'new',notes:r.owner_notes||''}}
+function getReqs(){return reqCache}
+async function loadReqs(){reqLoading=true;reqError=false;renderReqs();try{const r=await authFetch('/rest/v1/customer_requests?select=*&order=created_at.desc&limit=1000');if(!r.ok)throw new Error(r.status);reqCache=(await r.json()).map(fromRow)}catch(e){reqError=true;if(e.message==='no-session')ownerLogout()}finally{reqLoading=false;renderOwner()}}
+function renderOwner(){renderOwnerSites();const l=getReqs();document.getElementById('statRequests').textContent=l.length;document.getElementById('statNew').textContent=l.filter(r=>r.status==='new').length;renderReqs()}
+function renderReqs(){document.querySelectorAll('.fchip').forEach(b=>b.classList.toggle('on',b.dataset.f===reqFilter));const root=document.getElementById('ownerRequests'),l=getReqs().filter(r=>reqFilter==='all'||(r.status||'new')===reqFilter);if(reqLoading&&!reqCache.length){root.innerHTML='<p class="subtext">جارٍ تحميل الطلبات…</p>';return}if(reqError){root.innerHTML='<p class="subtext">تعذّر تحميل الطلبات. تأكد من الاتصال ومن تشغيل ملف SQL، ثم اضغط «تحديث».</p>';return}if(!l.length){root.innerHTML='<p class="subtext">لا توجد طلبات هنا.</p>';return}
+root.innerHTML=l.map(r=>{const hex=/^#[0-9a-f]{3,8}$/i.test(r.hex||'')?r.hex:'#999',st=r.status||'new';return `<div class="summary" style="margin:12px 0"><div class="erow"><b>${escapeHtml(r.id)}</b><span class="subtext">${escapeHtml(r.date)}</span><select style="margin-right:auto" onchange="setStatus('${escapeHtml(r.id)}',this.value)">${Object.entries(stLabels).map(([k,v])=>`<option value="${k}" ${k===st?'selected':''}>${v}</option>`).join('')}</select></div><p><b>النوع:</b> ${escapeHtml(r.type)}</p><p><b>المطلوب:</b> ${(r.wants||[]).map(escapeHtml).join('، ')||'—'}${r.note?' — '+escapeHtml(r.note):''}</p><p><b>الألوان:</b> ${colorDots(r)}</p><div class="erow"><textarea class="e2" rows="2" placeholder="ملاحظاتك على الطلب" onchange="setNote('${escapeHtml(r.id)}',this.value)">${escapeHtml(r.notes||'')}</textarea><button class="btn secondary" onclick="delReq('${escapeHtml(r.id)}')">حذف</button></div></div>`}).join('')}
+function colorDots(r){return (r.colors&&r.colors.length?r.colors:[{c:r.hex,n:r.color}]).map(x=>`<i class="dotc" style="background:${/^#[0-9a-f]{3,8}$/i.test(x.c||'')?x.c:'#999'}"></i> ${escapeHtml(x.n||'')}`).join(' &nbsp; ')}
+function setFilter(f){reqFilter=f;renderReqs()}
+async function sbMutate(id,method,body){try{const r=await authFetch('/rest/v1/customer_requests?id=eq.'+encodeURIComponent(id),{method,headers:{Prefer:'return=representation'},body:body?JSON.stringify(body):undefined});if(!r.ok)throw new Error(r.status);const j=await r.json();if(!j.length)throw new Error('no-rows');return j[0]}catch(e){if(e.message==='no-session')ownerLogout();toast('تعذّر تنفيذ العملية. تحقق من الاتصال وصلاحيات المالك.');return null}}
+async function setStatus(id,v){const row=await sbMutate(id,'PATCH',{status:ST_TO_DB[v]});if(row)reqCache=reqCache.map(r=>String(r.id)===String(id)?fromRow(row):r);renderOwner()}
+async function setNote(id,v){const row=await sbMutate(id,'PATCH',{owner_notes:v.slice(0,2000)});if(row){reqCache=reqCache.map(r=>String(r.id)===String(id)?fromRow(row):r);toast('تم حفظ الملاحظة.')}renderOwner()}
+async function delReq(id){if(!confirm('حذف هذا الطلب؟'))return;const row=await sbMutate(id,'DELETE');if(row){reqCache=reqCache.filter(r=>String(r.id)!==String(id));toast('تم حذف الطلب.')}renderOwner()}
+function exportCsv(){const q=s=>'"'+String(s==null?'':s).replace(/"/g,'""')+'"';const rows=[['الرقم','التاريخ','النوع','المطلوب','ملاحظة العميل','اللون','الحالة','ملاحظاتي'],...getReqs().map(r=>[r.id,r.date,r.type,(r.wants||[]).join(' | '),r.note,r.color,stLabels[r.status||'new'],r.notes])];const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+rows.map(r=>r.map(q).join(',')).join('\n')],{type:'text/csv;charset=utf-8'}));a.download='requests.csv';document.body.appendChild(a);a.click();a.remove()}
+function ownerTab(n){['requests','bot','sites','settings'].forEach(t=>{document.getElementById('tab-'+t).hidden=t!==n;document.querySelector('[data-tab="'+t+'"]').classList.toggle('on',t===n)});if(n==='bot')renderBotEditor();if(n==='settings')fillSettings()}
+async function setPass(){const v=document.getElementById('newPass').value;if(v.length<8)return toast('كلمة المرور ٨ أحرف على الأقل.');try{const r=await authFetch('/auth/v1/user',{method:'PUT',body:JSON.stringify({password:v})});if(!r.ok)throw new Error(r.status);document.getElementById('newPass').value='';toast('تم تغيير كلمة المرور ✓')}catch(e){toast('تعذّر تغيير كلمة المرور.')}}
+function backup(){const t=JSON.stringify({requests:getReqs(),sites:siteCache,bot:cfg},null,1);(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast('تم نسخ بياناتك.'),()=>toast('تعذّر النسخ.'))}
+// --- محرر البوت ---
+function renderBotEditor(){if(!draft)draft=clone(cfg);const d=draft;
+const row=(l,i,inner)=>`<div class="erow">${inner}<button class="ibtn" onclick="mvItem('${l}',${i},-1)" aria-label="أعلى">↑</button><button class="ibtn" onclick="mvItem('${l}',${i},1)" aria-label="أسفل">↓</button><button class="ibtn del" onclick="delItem('${l}',${i})" aria-label="حذف">✕</button></div>`;
+const tx=(k,l)=>`<div class="field"><label>${l}</label><input value="${escapeHtml(d.texts[k])}" oninput="draft.texts.${k}=this.value"></div>`;
+document.getElementById('botEditor').innerHTML=`<h4>النصوص</h4>${tx('welcome','رسالة الترحيب')}${tx('q1','السؤال الأول (نوع الموقع)')}${tx('q2','السؤال الثاني (ما تريده)')}${tx('hint2','تلميح السؤال الثاني')}${tx('q3','السؤال الثالث (اللون)')}
+<h4>أنواع المواقع</h4>${d.types.map((x,i)=>row('types',i,`<input class="e1" maxlength="4" value="${escapeHtml(x.e)}" oninput="draft.types[${i}].e=this.value"><input class="e2" value="${escapeHtml(x.t)}" oninput="draft.types[${i}].t=this.value">`)).join('')}<button class="btn secondary" onclick="addItem('types')">+ إضافة نوع</button>
+<h4>الخيارات (ما تريده من الموقع)</h4>${d.wants.map((x,i)=>row('wants',i,`<input class="e1" maxlength="4" value="${escapeHtml(x.e)}" oninput="draft.wants[${i}].e=this.value"><input class="e2" value="${escapeHtml(x.t)}" oninput="draft.wants[${i}].t=this.value"><div class="wfor" id="wfor${i}">${wantForHtml(x,i)}</div>`)).join('')}<button class="btn secondary" onclick="addItem('wants')">+ إضافة خيار</button>
+<h4>الألوان</h4>${d.colors.map((x,i)=>row('colors',i,`<input type="color" value="${escapeHtml(x.c)}" oninput="draft.colors[${i}].c=this.value"><input class="e2" value="${escapeHtml(x.n)}" oninput="draft.colors[${i}].n=this.value">`)).join('')}<button class="btn secondary" onclick="addItem('colors')">+ إضافة لون</button>`}
+function wantForHtml(x,i){const ids=wantTypes(x),all=!ids.length;return `<span class="wfor-l">يظهر في:</span><label class="wchk ${all?'on':''}"><input type="checkbox" ${all?'checked':''} onchange="setWantAll(${i})"> كل الأنواع</label>${draft.types.map(t=>{const on=ids.includes(t.id);return `<label class="wchk ${on?'on':''}"><input type="checkbox" ${on?'checked':''} onchange="toggleWantFor(${i},'${escapeHtml(t.id)}')"> ${escapeHtml(t.t)}</label>`}).join('')}`}
+function refreshWantFor(i){const el=document.getElementById('wfor'+i);if(el)el.innerHTML=wantForHtml(draft.wants[i],i)}
+function setWantAll(i){draft.wants[i].for=[];refreshWantFor(i)}
+function toggleWantFor(i,id){const w=draft.wants[i],ids=wantTypes(w);w.for=ids.includes(id)?ids.filter(x=>x!==id):[...ids,id];refreshWantFor(i)}
+function addItem(l){const n={types:{id:'t'+Date.now(),e:'✨',t:'نوع جديد'},wants:{e:'✅',t:'خيار جديد',for:[]},colors:{c:'#0d9488',n:'لون جديد'}}[l];draft[l].push(n);renderBotEditor()}
+function delItem(l,i){const x=draft[l][i];draft[l].splice(i,1);if(l==='types')draft.wants.forEach(w=>{w.for=wantTypes(w).filter(id=>id!==x.id)});renderBotEditor()}
+function mvItem(l,i,d){const j=i+d,a=draft[l];if(j<0||j>=a.length)return;[a[i],a[j]]=[a[j],a[i]];renderBotEditor()}
+async function saveBotCfg(){const d=clone(draft);Object.keys(d.texts).forEach(k=>d.texts[k]=String(d.texts[k]||'').trim()||DEFAULT_CFG.texts[k]);d.types=d.types.filter(x=>String(x.t||'').trim());d.wants=d.wants.filter(x=>String(x.t||'').trim());d.colors=d.colors.filter(x=>String(x.n||'').trim());normalizeCfg(d);if(!d.types.length||!d.wants.length||!d.colors.length)return toast('يجب أن يبقى نوع وخيار ولون واحد على الأقل.');if(!session)return toast('سجّل دخولك بحساب المالك أولًا.');try{if(!(await verifyOwner()))return toast('ليس لديك صلاحية المالك.');const r=await authFetch('/rest/v1/bot_settings?on_conflict=id',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify({id:1,config:d,updated_at:new Date().toISOString()})});if(!r.ok)throw new Error('HTTP '+r.status);const rows=await r.json();if(!rows.length)throw new Error('empty response');cfg=clone(d);draft=clone(cfg);try{localStorage.setItem('nasrBotCfg',JSON.stringify(cfg))}catch(e){}renderBotEditor();renderBot();toast('تم حفظ إعدادات البوت في قاعدة البيانات ✓')}catch(e){console.error(e);toast('تعذّر الحفظ في قاعدة البيانات. تأكد من إضافة سياسة كتابة المالك في Supabase.')}}
+async function resetBotCfg(){if(!confirm('استعادة أسئلة البوت الأصلية؟ سيتم حفظ الإعدادات الأصلية في قاعدة البيانات.'))return;draft=clone(DEFAULT_CFG);await saveBotCfg()}
+</script></body></html>
